@@ -7,7 +7,7 @@ node default {
 		command => '/usr/bin/apt-get update'
 	}
 
-	$packages = [ 'build-essential', 'curl' ]
+	$packages = [ 'build-essential', 'curl', 'libperl-critic-perl' ]
 	package { $packages:
 		ensure => latest
 	}
