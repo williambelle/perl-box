@@ -26,7 +26,7 @@ class perlbrew {
 
 	exec { 'install all perl':
 		environment => 'PERLBREW_ROOT=/home/vagrant/perl5/perlbrew',
-		command     => '/home/vagrant/perl5/perlbrew/bin/perlbrew install-multiple --notest 5.8.9 5.10.1 5.12.5 5.14.4 5.16.3 5.18.2 5.20.0',
+		command     => '/home/vagrant/perl5/perlbrew/bin/perlbrew install-multiple --notest 5.8.9 5.10.1 5.12.5 5.14.4 5.16.3 5.18.4 5.20.2',
 		timeout     => 10000,
 		user        => 'vagrant',
 		cwd         => '/home/vagrant',
@@ -36,7 +36,7 @@ class perlbrew {
 
 	exec { 'set default perl':
 		environment => 'PERLBREW_ROOT=/home/vagrant/perl5/perlbrew',
-		command     => '/home/vagrant/perl5/perlbrew/bin/perlbrew switch perl-5.20.0',
+		command     => '/home/vagrant/perl5/perlbrew/bin/perlbrew switch perl-5.20.2',
 		user        => 'vagrant',
 		cwd         => '/home/vagrant',
 		before      => Exec['install cpanm'],
