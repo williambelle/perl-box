@@ -1,16 +1,16 @@
 node default {
-	Exec { 
-		path => ['/bin', '/usr/bin/', '/sbin/', '/usr/sbin/', '/usr/local/bin/']
-	}
+  Exec {
+    path => ['/bin', '/usr/bin/', '/sbin/', '/usr/sbin/', '/usr/local/bin/']
+  }
 
-	exec { 'apt-get update':
-		command => '/usr/bin/apt-get update'
-	}
+  exec { 'apt-get update':
+    command => '/usr/bin/apt-get update'
+  }
 
-	$packages = [ 'build-essential', 'curl', 'libperl-critic-perl' ]
-	package { $packages:
-		ensure => latest
-	}
+  $packages = [ 'build-essential', 'curl', 'libperl-critic-perl' ]
+  package { $packages:
+    ensure => latest
+  }
 
-	include perlbrew
+  include perlbrew
 }
