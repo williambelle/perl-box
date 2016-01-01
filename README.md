@@ -18,6 +18,7 @@ The box include :
   * 5.16.3
   * 5.18.4
   * 5.20.2
+  * 5.22.1
 * Perl Critic
 
 Build
