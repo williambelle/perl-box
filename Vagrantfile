@@ -2,6 +2,8 @@ Vagrant.configure('2') do |config|
   config.vm.box = 'ubuntu/trusty64'
   config.vm.hostname = 'perl-box'
 
+  config.vm.provision :shell, path: "shell/bootstrap.sh"
+
   # enable puppet provisionner
   config.vm.provision :puppet do |puppet|
     puppet.manifest_file = 'site.pp'
