@@ -1,8 +1,8 @@
-perl-box
+Perl Box
 ========
 
 Synopsis
------------
+--------
 
 vagrant &amp; puppet configuration for developing Perl module.
 
@@ -17,8 +17,9 @@ The box include :
   * 5.14.4
   * 5.16.3
   * 5.18.4
-  * 5.20.2
-  * 5.22.1
+  * 5.20.3
+  * 5.22.2
+  * 5.24.0
 * Perl Critic
 
 Build
