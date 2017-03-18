@@ -8,7 +8,7 @@ vagrant &amp; puppet configuration for developing Perl module.
 
 The box include :
 
-* Ubuntu Server 64-bit 14.04
+* Ubuntu 16.04 LTS 64-bit
 * Perlbrew, cpanm
 * Perl :
   * 5.8.9
@@ -18,8 +18,8 @@ The box include :
   * 5.16.3
   * 5.18.4
   * 5.20.3
-  * 5.22.2
-  * 5.24.0
+  * 5.22.3
+  * 5.24.1
 * Perl Critic
 
 Build
@@ -64,9 +64,6 @@ License
 -------
 
 The MIT License (MIT)
-
-Copyright (c) 2014 William Belle
-
 
 [1]: https://www.virtualbox.org/
 [2]: http://www.vagrantup.com/
