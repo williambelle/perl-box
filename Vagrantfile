@@ -1,5 +1,5 @@
 Vagrant.configure('2') do |config|
-  config.vm.box      = 'puppetlabs/ubuntu-16.04-64-puppet'
+  config.vm.box = 'ubuntu/bionic64'
   config.vm.hostname = 'perl-box'
 
   config.vm.synced_folder '../', '/perl'
@@ -10,13 +10,6 @@ Vagrant.configure('2') do |config|
     vb.customize ['modifyvm', :id, '--memory', '2048']
   end
 
-  # enable puppet provisionner
-  config.vm.provision :puppet do |puppet|
-    puppet.environment      = 'production'
-    puppet.environment_path = '../../'
-    puppet.manifest_file    = 'site.pp'
-    puppet.manifests_path   = 'puppet/manifests'
-    puppet.module_path      = 'puppet/modules'
-    puppet.options          = ['--verbose']
-  end
+  config.vm.provision :shell, path: 'bin/bootstrap.sh'
+  config.vm.provision :shell, path: 'bin/perlbrew.sh', privileged: false
 end
