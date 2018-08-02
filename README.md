@@ -4,11 +4,11 @@ Perl Box
 Synopsis
 --------
 
-vagrant &amp; puppet configuration for developing Perl module.
+Vagrant configuration for developing Perl modules.
 
 The box include :
 
-* Ubuntu 16.04 LTS 64-bit
+* Ubuntu 18.04 LTS 64-bit
 * Perlbrew, cpanm
 * Perl :
   * 5.8.9
@@ -19,8 +19,9 @@ The box include :
   * 5.18.4
   * 5.20.3
   * 5.22.4
-  * 5.24.3
-  * 5.26.1
+  * 5.24.4
+  * 5.26.2
+  * 5.28.0
 * Perl Critic
 
 Build
