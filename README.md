@@ -6,7 +6,7 @@ Synopsis
 
 Vagrant configuration for developing Perl modules.
 
-The box include :
+The box include:
 
 * Ubuntu 18.04 LTS 64-bit
 * Perlbrew, cpanm
@@ -20,15 +20,16 @@ The box include :
   * 5.20.3
   * 5.22.4
   * 5.24.4
-  * 5.26.2
-  * 5.28.0
+  * 5.26.3
+  * 5.28.2
+  * 5.30.0
 * Perl Critic
 
 Build
 -----
 
 ```bash
-$ vagrant up
+vagrant up
 ```
 
 Usage
@@ -37,20 +38,20 @@ Usage
 This will SSH into the running Vagrant machine and give you access to the shell.
 
 ```bash
-$ vagrant ssh
+vagrant ssh
 ```
 
-This will install all the deps for every Perl version.
+This will install all the dependencies for every Perl version.
 
 ```bash
-$ cd /to/my/perl/module
-$ perlbrew exec cpanm --installdeps .
+cd /to/my/perl/module
+perlbrew exec cpanm --installdeps .
 ```
 
 And finally, to test your module against each version of Perl
 
 ```bash
-$ perlbrew exec prove -Ilib/ -r
+perlbrew exec prove -Ilib/ -r
 ```
 
 Useful links
